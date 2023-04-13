@@ -20,10 +20,14 @@ To use this project, you need to have Python and the following libraries install
 
 You can install these libraries using pip or conda, for example:
 
+```bash
+pip install pandas numpy matplotlib seaborn
+```
+
 ## Usage 🚀🔍
 Clone the repository to your local machine:
 
 ```bash
-pip install pandas numpy matplotlib seaborn
+git clone https://github.com/perskii/correlationPortfolio-python-libs.git
 ```
 
