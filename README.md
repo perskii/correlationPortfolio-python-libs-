@@ -4,10 +4,10 @@ This project is aimed at creating a correlation portfolio using Python libraries
 
 ## Features 🛠️
 
-- Calculates correlation coefficients for a given set of financial instruments. 📈🔬
-- Constructs a correlation portfolio based on the calculated correlation coefficients. 💼🔝
-- Provides graphical visualization of the correlation matrix and portfolio allocation. 📊📉
-- Offers flexibility in defining the investment universe and allocation weights. 💪📉
+-  📈🔬
+-  💼🔝
+-  📊📉
+-  💪📉
 
 ## Installation 💻🔧
 
