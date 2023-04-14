@@ -1,0 +1,58 @@
+missing values:
+
+Both NaN and None are generally treated as missing values in Pandas, and they can be checked for using the same methods
+------------------------------------------------------------------------------------------------
+
+df.sort_values(by=['gross'], inplace = False, ascending = False)
+
+specifies whether the original DataFrame should be modified in place
+
+If 'inplace=False' - the function will return a sorted copy of the original DataFrame.
+
+If 'inplace=True' - the original DataFrame will be modified and the function won't return anything.
+
+------------------------------------------------------------------------------------------------
+df.corr(numeric_only = True)
+
+The corr() function returns a new DataFrame that shows the pairwise correlation between all columns in the original DataFrame that have numeric data types. The values in the new DataFrame range from -1 to 1, with -1 indicating a perfect negative correlation, 0 indicating no correlation, and 1 indicating a perfect positive correlation.
+
+If 'numeric_only = True' - specifies that only columns with numeric data types should be included in the correlation calculation.
+
+If 'numeric_only = False' - all columns will be included in the calculation regardless of their data type.
+
+method='pearson' -> measures the linear relationship between two variables.
+method='kendall' -> measures the strength of dependence between two variables.
+method='spearman' -> measures the strength and direction of monotonic relationship between two variables.
+------------------------------------------------------------------------------------------------
+
+df_numerized[col.name] = df_numerized[col.name].cat.codes
+
+The method works by assigning a unique integer code to each distinct category in a categorical column of the DataFrame.
+
+------------------------------------------------------------------------------------------------
+df.apply(lambda x: x.factorize()[0]).corr(method='pearson') explain that please
+
+The resulting factorized values for each column are then used to calculate the Pearson correlation coefficient using the 'corr()' function with 'method' set to 'pearson'. The 'corr()' function computes the pairwise correlation between all pairs of columns in the DataFrame using the Pearson correlation method, which measures the linear relationship between two variables. The Pearson correlation coefficient ranges from -1 (perfect negative correlation) to 1 (perfect positive correlation), with 0 indicating no correlation.
+
+So, the overall result of this code will be a correlation matrix (a DataFrame) with Pearson correlation coefficients between the factorized values of each pair of columns in the original DataFrame 'df'. This can be useful, for example, to calculate the correlation between categorical variables encoded as integers in a DataFrame. However, it's important to note that interpreting Pearson correlation coefficients for non-numeric data can be misleading, as the Pearson correlation assumes a linear relationship between variables, which may not always hold for categorical data.
+
+------------------------------------------------------------------------------------------------
+Lambda in python pandas:
+
+Some commonly used functions include:
+
+In the context of pandas, the 'lambda' function is often used in conjunction with various DataFrame or Series methods to apply a custom operation to each element, row, or column of the data. 
+
+apply(): This function applies a custom function to each element, row, or column of a DataFrame or Series. A lambda function can be used as an argument to apply a custom operation to each element or row/column of the data.
+
+map(): This function applies a custom function to each element of a Series. A lambda function can be used to map values in a Series to new values based on a custom operation.
+
+applymap(): This function applies a custom function to each element of a DataFrame. A lambda function can be used to apply element-wise operations to all elements in a DataFrame.
+
+filter(): This function filters a DataFrame or Series based on a custom condition. A lambda function can be used as an argument to define the filtering condition based on custom logic.
+
+agg(): This function performs aggregation operations on a DataFrame or Series, such as calculating mean, sum, count, etc. A lambda function can be used to specify custom aggregation operations.
+
+groupby(): This function groups data in a DataFrame based on one or more columns and allows applying custom aggregation functions on each group. A lambda function can be used as an argument to specify custom aggregation functions.
+
+transform(): This function performs a group-wise transformation on a DataFrame or Series, applying a custom function to each group. A lambda function can be used as an argument to specify the group-wise transformation operation.
