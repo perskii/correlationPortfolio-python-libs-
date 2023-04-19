@@ -1,4 +1,4 @@
-# Correlation Portfolio 📊📈📉 <WORK IN PROGRESS>
+# Correlation Portfolio 📊📈📉 !WORK IN PROGRESS!
 
 This project is aimed at creating a correlation portfolio using Python libraries to analyze and construct a diversified investment portfolio based on correlation coefficients. 📈💼🔍
 
